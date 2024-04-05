@@ -16,7 +16,13 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
         return (
           <Link href={link.path} key={index} className={`capitalize ${linkStyles}`}>
             {link.path===path &&(
-              <motion.span initial={{y:'-100%'}} animate={{y:0}} transition={{type:'tween'}} layoutId='underline' className={`${underlineStyles}`}/>
+              <motion.span 
+              initial={{y:'-100%'}} 
+              animate={{y:0}} 
+              transition={{type:'tween'}} 
+              layoutId='underline' 
+              className={`${underlineStyles}`}
+              />
             )}
             {link.name}
           </Link>
