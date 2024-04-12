@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "4rem",
       screens: {
         "2xl": "1400px",
       },
@@ -76,7 +76,9 @@ module.exports = {
       },
       backgroundImage:{
         hero:'url(/hero/hero-bg.png)',
-        hero_shape:'url(/hero/shap-1.svg)'
+        hero_shape:'url(/hero/shape-1.svg)',
+        hero_shape2_light:'url(/hero/shape-2-light.svg)',
+        hero_shape2_dark:'url(/hero/shape-2-dark.svg)'
       },
 
     },
