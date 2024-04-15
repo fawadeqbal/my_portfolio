@@ -18,6 +18,16 @@ import Socials from './Socials'
 
 
 const Hero = () => {
+
+    const handleDownload = () => {
+       
+        const link = document.createElement('a');
+        link.href = '/fawad_iqbal_CV.pdf'; // Specify the path to your CV file
+        link.download = 'fawad_iqbal_CV.pdf'; // Specify the filename for the downloaded file
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
     return (
         <section className='py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none'>
             <div className="container mx-auto">
@@ -32,9 +42,9 @@ const Hero = () => {
                             <Link href={'/contact'}>
                                 <Button className='gap-x-2'>Contact me <Send size={18}/></Button>
                             </Link>
-                            <Link href={'/contact'}>
-                                <Button variant='secondary' className='gap-x-2'>Download CV <Download size={18}/></Button>
-                            </Link>
+                          
+                                <Button onClick={handleDownload} variant='secondary' className='gap-x-2'>Download CV <Download path='mycv.png' size={18}/></Button>
+                           
                         </div>
 
                         <Socials containerStyles='flex gap-x-6 mx-auto xl:mx-0' iconsStyles='text-foreground text-[22px] hover:text-primary transition-all'/>
